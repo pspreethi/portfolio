@@ -347,6 +347,7 @@ section {
   position: absolute;
   right: -5rem;
   bottom: 2.5rem;
+  z-index: 100;
 }
 
 .details-container {
@@ -370,44 +371,147 @@ section {
   margin: auto 0;
 }
 
-/* EXPERIENCE SECTION */
 
+/* EXPERIENCE SECTION */
 #experience {
   position: relative;
 }
 
-.experience-sub-title {
-  color: rgb(85, 85, 85);
-  font-weight: 600;
-  font-size: 1.75rem;
+.experience-containers {
+  gap: 2rem;
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
-.experience-details-container {
+/* PANEL CONTAINER */
+.experience-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* PANELS */
+.experience-panel {
+  background: white;
+  width: 250px; /* Fixed width to prevent layout shift */
+  min-height: 120px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+
+/* EXPAND HEIGHT SMOOTHLY */
+.experience-panel:hover {
+  min-height: 220px; /* Expands height instead of width */
+  background: #f5f5f5;
+  transform: scale(1.02); /* Subtle scaling for effect */
+}
+
+/* CONTENT INSIDE PANEL */
+.panel-content {
+  opacity: 0;
+  max-height: 0;
+  transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+}
+
+/* SHOW CONTENT ON HOVER */
+.experience-panel:hover .panel-content {
+  opacity: 1;
+  max-height: 500px;
+}
+/* HOVER EFFECT: SHADOW & BACKGROUND */
+.experience-panel:hover {
+  background: #f1f5f1; /* Light blue highlight */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* SKILLS SCROLLING SECTION */
+.skills-carousel {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 20px 0;
+  background: #f8f9fa;
+  margin-top: 40px;
+  position: relative;
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  align-items: center;
 }
 
-.article-container {
+/* SCROLLING TRACK */
+.carousel-track {
   display: flex;
-  text-align: initial;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 2.5rem;
-  justify-content: space-around;
+  gap: 40px;
+  animation: scroll 60s linear infinite;  /* Speed of scrolling */
 }
 
-article {
+/* SKILL ICONS */
+.carousel-track img {
+  height: 60px;  /* Adjust icon height */
+  width: auto;
+  display: inline-block;
+  filter: grayscale(50%);
+  margin-right: 30px;  /* Add space between the icons */
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/* HOVER EFFECT */
+.carousel-track img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+/* SMOOTH SCROLLING ANIMATION */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-30%);  /* Move all images out of view */
+  }
+}
+
+/* DUPLICATE IMAGES FOR SEAMLESS SCROLLING */
+.skills-carousel .carousel-track {
+  animation: scroll 20s linear infinite;
+}
+
+
+.container {
+  position: absolute;
+  bottom: 20px;
+  right: 5%; /* Adjust percentage for fine-tuning */
   display: flex;
-  width: 10rem;
-  justify-content: space-around;
-  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  z-index: 100;
+  background: none;
+  padding: 5px;
 }
 
-article .icon {
-  cursor: default;
+/* Arrow styling */
+.icon.arrow {
+  width: 35px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
 }
+
+/* Hover effect */
+.icon.arrow:hover {
+  transform: scale(1.1);
+}
+
+
 
 /* PROJECTS SECTION */
 
