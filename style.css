@@ -228,7 +228,8 @@ section {
 
 @keyframes typing {
   from { width: 0; }
-  to { width: 100%; }
+  to { width: 17ch; }
+  
 }
 
 @keyframes blink {
@@ -510,7 +511,24 @@ section {
   transform: scale(1.1);
 }
 
+/* Make scrollable panel mobile friendly */
+.panel-content.scrollable {
+  max-height: 100px; /* or adjust as needed */
+  overflow-y: auto;
+  padding-right: 10px;
+}
 
+/* On mobile: allow it to fully expand */
+@media screen and (max-width: 600px) {
+  .panel-content.scrollable {
+    max-height: none;
+    overflow-y: visible;
+  }
+
+  .experience-panel {
+    min-height: auto !important;
+  }
+}
 
 /* PROJECTS SECTION */
 
