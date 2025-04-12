@@ -74,6 +74,7 @@ a:hover {
   text-decoration-color: rgb(181, 181, 181);
 }
 
+
 .logo {
   font-size: 2rem;
 }
@@ -316,6 +317,7 @@ section {
 
 /* ABOUT SECTION */
 
+
 #about {
   position: relative;
 }
@@ -331,7 +333,6 @@ section {
   flex-direction: column;
 }
 
-.about-containers,
 .about-details-container {
   display: flex;
 }
@@ -396,15 +397,16 @@ section {
 /* PANELS */
 .experience-panel {
   background: white;
-  width: 250px; /* Fixed width to prevent layout shift */
-  min-height: 120px;
+  width: 290px; /* Fixed width to prevent layout shift */
+  min-height: 10px;
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
   overflow: hidden;
-  text-align: left;
+  text-align: center;
   position: relative;
+  font-size: 1rem;
 }
 
 /* EXPAND HEIGHT SMOOTHLY */
@@ -416,8 +418,9 @@ section {
 
 /* CONTENT INSIDE PANEL */
 .panel-content {
-  opacity: 0;
+  opacity: 1;
   max-height: 0;
+  text-align: left;
   transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
 }
 
@@ -428,10 +431,25 @@ section {
 }
 /* HOVER EFFECT: SHADOW & BACKGROUND */
 .experience-panel:hover {
-  background: #f1f5f1; /* Light blue highlight */
+  /*background: #f1f5f1;  Light blue highlight */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+.hover-hint {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #999;
+  letter-spacing: 5px;
+  animation: dotsPulse 2s ease-in-out infinite;
+}
+
+/* Optional soft pulse animation */
+@keyframes dotsPulse {
+  0%, 100% { opacity: 0.5; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-2px); }
+}
 /* SKILLS SCROLLING SECTION */
 .skills-carousel {
   width: 100%;
@@ -552,6 +570,7 @@ section {
   color: black;
 }
 .project-text {
+  margin: 1rem;
   text-align: left;
   font-size: 0.75rem;
   margin-bottom: 1rem;
@@ -564,10 +583,17 @@ section {
 
 .about-containers {
   display: flex;
-  gap: 2rem;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
 }
+
+.details-container {
+  flex: 1 1 calc(33.333% - 2rem); /* 3 cards per row with gap */
+  max-width: calc(33.333% - 2rem);
+  box-sizing: border-box;
+}
+
 
 .details-container.color-container {
   display: flex;

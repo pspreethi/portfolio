@@ -116,3 +116,15 @@
     max-height: none !important;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .details-container {
+    flex: 1 1 calc(50% - 2rem); /* 2 per row on tablets */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .details-container {
+    flex: 1 1 100%; /* 1 per row on small screens */
+  }
+}
