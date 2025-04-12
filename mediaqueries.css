@@ -176,5 +176,11 @@
   .details-container {
     flex: 1 1 100%;
   }
+  .about-pic {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 1rem;
+  }
 }
 
