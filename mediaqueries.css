@@ -115,6 +115,9 @@
     opacity: 1 !important;
     max-height: none !important;
   }
+  .details-container {
+    flex: 1 1 100%; /* 1 per row on small screens */
+  }
 }
 
 @media screen and (max-width: 1024px) {
