@@ -66,8 +66,8 @@
   }
 
   .details-container {
-    width: 90%;
-    max-width: 400px;
+    width: 100%;
+    max-width: 300px;
     text-align: center;
     padding: 1rem;
     box-sizing: border-box;
