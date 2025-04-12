@@ -153,6 +153,13 @@
     height: 46vw;
     justify-content: center;
   }
+  .about-pic {
+    width: 80%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 1rem;
+    object-fit: cover;
+  }
 
   .section__text__p2 {
     font-size: 1.25rem;
