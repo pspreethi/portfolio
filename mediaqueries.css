@@ -48,17 +48,51 @@
 }
 
 @media screen and (max-width: 768px) {
-  /* GENERAL SECTION LAYOUT */
-  .section-container,
+  .experience-panel {
+    min-height: auto !important;
+  }
+
+  .experience-panel .panel-content {
+    opacity: 1 !important;
+    max-height: none !important;
+  }
+  .experience-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .experience-panel {
+    width: 90%;
+    max-width: 320px;
+    text-align: center;
+  }
+  .about-containers {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .details-container {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
   .about-details-container {
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  section {
-    padding: 1rem;
+  .section-container {
+    flex-direction: column;
+    align-items: center;
   }
-
+  
   .section__pic-container {
     width: 100%;
     display: flex;
@@ -72,35 +106,6 @@
     border-radius: 1rem;
   }
 
-  /* ABOUT SECTION */
-  .about-containers {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    width: 100%;
-    padding: 1rem 0;
-  }
-
-  /* EXPERIENCE SECTION */
-  .experience-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .experience-panel {
-    min-height: auto !important;
-    width: 90%;
-    max-width: 320px;
-    text-align: center;
-  }
-
-  .experience-panel .panel-content {
-    opacity: 1 !important;
-    max-height: none !important;
-  }
-
-  /* BLOG SECTION */
   .blog-cards {
     display: flex;
     flex-direction: column;
@@ -113,14 +118,14 @@
     width: 90%;
     max-width: 400px;
     padding: 1.2rem 1.5rem;
-    background-color: #fff;
+    box-sizing: border-box;
+    background-color: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
-    box-sizing: border-box;
   }
 
   .blog-card h3 {
@@ -148,8 +153,6 @@
     font-weight: 600;
     text-decoration: none;
   }
-
-  /* PROJECTS SECTION */
   .experience-details-container {
     flex-direction: column;
     align-items: center;
@@ -200,21 +203,94 @@
 
 
 @media screen and (max-width: 600px) {
-  .title {
-    font-size: 1.75rem;
+  #contact,
+  footer {
+    height: 40vh;
+  }
+
+  #profile {
+    height: 83vh;
+    margin-bottom: 0;
+  }
+
+  article {
+    font-size: 1rem;
+  }
+
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+
+  .about-containers,
+  .contact-info-upper-container,
+  .btn-container {
+    flex-wrap: wrap;
+  }
+
+  .contact-info-container {
+    margin: 0;
+  }
+
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+
+  .experience-sub-title {
+    font-size: 1.25rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .section__pic-container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+  .about-pic {
+    width: 80%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 1rem;
+    object-fit: cover;
   }
 
   .section__text__p2 {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
   }
 
-  .project-btn {
-    font-size: 0.85rem;
-    padding: 8px;
+  .title {
+    font-size: 2rem;
   }
 
+  .text-container {
+    text-align: justify;
+  }
+
+  .typing-text {
+    font-size: 1.75rem;
+    to {
+      width: 17ch;
+    }
+  }
+
+  .details-container {
+    flex: 1 1 100%;
+  }
   .about-pic {
-    max-width: 260px;
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 1rem;
   }
 }
 
