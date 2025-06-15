@@ -17,6 +17,7 @@
       <ul class="nav-links">
         <li><a href="#about" class="active"> About</a></li>
         <li><a href="#experience"> Experience</a></li>
+        <li><a href="#blog"> Blogs</a></li>
         <li><a href="#projects"> Projects</a></li>
         <li><a href="#contact"> Contact</a></li>
       </ul>
@@ -34,6 +35,7 @@
         <div class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#blog" onclick="toggleMenu()">Blogs</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
@@ -41,7 +43,7 @@
     </nav>
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./assets/pic.png" alt="Sai Preethi profile picture" />
+        <img src="./assets/g4.gif" alt="Sai Preethi profile picture" />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
@@ -81,9 +83,8 @@
       
       <div class="about-wrapper">
         <div class="about-image">
-          <img src="./assets/pic2.jpeg" alt="Profile picture" class="about-pic" />
+          <img src="./assets/g5.gif" alt="Profile picture" class="about-pic" />  
         </div>
-    
         <div class="about-content">
           <div class="highlights">
             <div class="highlight-card">
@@ -106,6 +107,11 @@
             <p>Recently graduated with a Master’s in Information Systems from CSULB, I focus on product data, experimentation, machine learning, and scalable system design, shaped by hands-on experience across retail analytics, innovation, and engineering teams.</p>
             
             <p><strong>I’m actively exploring full-time opportunities</strong> in data science, analytics, or product-focused roles where I can apply a systems mindset and a love for turning messy data into meaningful insights.</p>
+            <p>
+              <a href="./assets/SPP_GIT.pdf" target="_blank" class="view-link">
+                📄 View CV for full details on experience
+              </a>
+            </p>
           </div>
         </div>
         <div class="container1">
@@ -116,34 +122,36 @@
     <section id="blog" class="blog-section">
       <h2 class="section-title">Latest from My Blog</h2>
       <p class="section-intro">Sharing insights on data, analytics, product thinking & career journeys.</p>
-      <div class="blog-cards">
-        <div class="blog-card">
-          <h3>The Google button that’s still around, quietly</h3>
-          <p class="blog-meta-sm">Mar 20, 2025 • 6 min read</p>
-          <p>Why “I’m Feeling Lucky” Still Exists — And What It Teaches Us About Nostalgia, UX, and Product Experimentation</p>
-          <a href="https://medium.com/design-bootcamp/the-google-button-thats-still-around-quietly-1613392ffdfa" target="_blank" class="blog-link">Read More →</a>
-        </div>
-        <div class="blog-card">
-          <h3>Why .99 Still Wins Even with AI Setting the Prices</h3>
-          <p class="blog-meta-sm">Mar 28, 2025 • 4 min read</p>
-          <p>In a world of dynamic pricing and AI optimization, .99 still converts better. It’s not just psychology. It’s what the data says.</p>
-          <a href="https://medium.com/@pokasaipreethi/why-99-still-wins-even-with-ai-setting-the-prices-4c01949ea437" target="_blank" class="blog-link">Read More →</a>
-        </div>
-        <div class="blog-card">
-          <h3>What’s a Transformer in AI? Attention, Please!</h3>
-          <p class="blog-meta-sm">Apr 14, 2025 • 9 min read</p>
-          <p>A beginner-friendly breakdown of the Transformer architecture, the deep learning model powering GPT, BERT, and modern AI.</p>
-          <a href="https://medium.com/@pokasaipreethi/whats-a-transformer-in-ai-attention-please-03eb53d54404" target="_blank" class="blog-link">Read More →</a>
+      <div class="blog-wrapper">
+        <div class="blog-cards">
+          <div class="blog-card">
+            <h3>The Google button that’s still around, quietly</h3>
+            <p class="blog-meta-sm">Mar 20, 2025 • 6 min read</p>
+            <p>Why “I’m Feeling Lucky” Still Exists — And What It Teaches Us About Nostalgia, UX, and Product Experimentation</p>
+            <a href="https://medium.com/design-bootcamp/the-google-button-thats-still-around-quietly-1613392ffdfa" target="_blank" class="blog-link">Read More →</a>
+          </div>
+          <div class="blog-card">
+            <h3>Why .99 Still Wins Even with AI Setting the Prices</h3>
+            <p class="blog-meta-sm">Mar 28, 2025 • 4 min read</p>
+            <p>In a world of dynamic pricing and AI optimization, .99 still converts better. It’s not just psychology. It’s what the data says.</p>
+            <a href="https://medium.com/@pokasaipreethi/why-99-still-wins-even-with-ai-setting-the-prices-4c01949ea437" target="_blank" class="blog-link">Read More →</a>
+          </div>
+          <div class="blog-card">
+            <h3>What’s a Transformer in AI? Attention, Please!</h3>
+            <p class="blog-meta-sm">Apr 14, 2025 • 9 min read</p>
+            <p>A beginner-friendly breakdown of the Transformer architecture, the deep learning model powering GPT, BERT, and modern AI.</p>
+            <a href="https://medium.com/@pokasaipreethi/whats-a-transformer-in-ai-attention-please-03eb53d54404" target="_blank" class="blog-link">Read More →</a>
+          </div>
         </div>
         <div class="container1">
-          <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+            <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
         </div>
       </div>
       <div class="blog-footer-cta">
-        <a href="https://medium.com/@pokasaipreethi" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968885.png" alt="Medium icon" class="medium-icon" />
-          <span>View all posts on Medium</span>
-        </a>
+          <a href="https://medium.com/@pokasaipreethi" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968885.png" alt="Medium icon" class="medium-icon" />
+            <span>View all blogs on Medium</span>
+          </a>
       </div>
     </section>    
     <section id="experience">

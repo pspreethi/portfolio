@@ -12,9 +12,16 @@ body {
 }
 
 body {
-  background: linear-gradient(45deg, #B0E0E6, #AEC6CF, #F0FFF0, #98FB98);
-  background-size: 400% 400%;
-  animation: gradientAnimation 10s infinite ease-in-out;
+  animation: pastelFade 20s infinite;
+}
+
+@keyframes pastelFade {
+  0% { background-color: #cfeef3; }
+  10%   { background-color: #e9def8; } 
+  25%  { background-color: #AEC6CF; } 
+  50%  { background-color: #F0FFF0; } 
+  75%  { background-color: #ffebe9; } 
+  100% { background-color: #cfeef3; } 
 }
 
 @keyframes gradientAnimation {
@@ -449,6 +456,10 @@ section {
   margin-top: 30px;
 }
 /* Blog SECTION */
+
+#blog {
+  position: relative;
+}
 
 .blog-section {
   padding: 60px 20px;
